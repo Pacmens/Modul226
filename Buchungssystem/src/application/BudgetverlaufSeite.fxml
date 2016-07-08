@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="339.0" prefWidth="415.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <MenuBar layoutY="1.0" prefHeight="24.0" prefWidth="415.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="Profil">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Profildaten ändern" />
+                  <MenuItem mnemonicParsing="false" text="Abmelden" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Datenausgabe">
+            <items>
+                  <MenuItem mnemonicParsing="false" text="Budget ansehen" />
+            </items>
+          </Menu>
+            <Menu mnemonicParsing="false" text="Dateneingabe">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="Ausgabe erfassen" />
+                  <MenuItem mnemonicParsing="false" text="Einnahme erfassen" />
+               </items>
+            </Menu>
+        </menus>
+      </MenuBar>
+      <Label alignment="BOTTOM_CENTER" layoutX="1.0" layoutY="326.0" prefHeight="11.0" prefWidth="415.0" text="footer" />
+      <Hyperlink layoutX="1.0" layoutY="25.0" text="&lt;&lt;zurück" />
+      <TableView layoutX="147.0" layoutY="92.0" prefHeight="200.0" prefWidth="247.0">
+        <columns>
+          <TableColumn prefWidth="75.0" text="Datum" />
+          <TableColumn prefWidth="92.0" text="Veränderung" />
+            <TableColumn prefWidth="79.0" text="Kontostand" />
+        </columns>
+      </TableView>
+      <Label layoutX="13.0" layoutY="69.0" text="Kontoverlauf">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="13.0" layoutY="121.0" text="Momentaner Kontostand:" />
+      <Label layoutX="13.0" layoutY="135.0" text="[Kontostand] CHF" />
+   </children>
+</AnchorPane>

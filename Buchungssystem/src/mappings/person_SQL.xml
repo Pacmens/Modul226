@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sqlMapping>
+	<dbToJava name="person" javaKlasse="models.Person">
+		<mapping column="PERSON_ID" attribut="personId"></mapping>
+		<mapping column="NAME" attribut="name"></mapping>
+		<mapping column="EMAIL" attribut="email"></mapping>
+		<mapping column="PASSWORT" attribut="password"></mapping>
+		<mapping column="IS_ADMIN" attribut="isAdmin"></mapping>
+	</dbToJava>
+</sqlMapping>

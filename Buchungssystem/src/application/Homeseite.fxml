@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="339.0" prefWidth="415.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <MenuBar layoutY="1.0" prefHeight="24.0" prefWidth="415.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="Profil">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Profildaten ändern" />
+                  <MenuItem mnemonicParsing="false" text="Abmelden" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Datenausgabe">
+            <items>
+                  <MenuItem mnemonicParsing="false" text="Budget ansehen" />
+                  <MenuItem mnemonicParsing="false" text="Budgetverlauf" />
+            </items>
+          </Menu>
+            <Menu mnemonicParsing="false" text="Dateneingabe">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="Ausgabe erfassen" />
+                  <MenuItem mnemonicParsing="false" text="Einnahme erfassen" />
+               </items>
+            </Menu>
+        </menus>
+      </MenuBar>
+      <Label layoutX="26.0" layoutY="74.0" prefHeight="73.0" prefWidth="95.0" text="Willkommenstext" />
+      <Label layoutX="222.0" layoutY="60.0" text="Kontostand:">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="319.0" layoutY="60.0" text="-------">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label alignment="BOTTOM_CENTER" layoutX="1.0" layoutY="326.0" prefHeight="11.0" prefWidth="415.0" text="footer" />
+   </children>
+</AnchorPane>
