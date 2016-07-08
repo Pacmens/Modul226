@@ -2,7 +2,6 @@ package application;
 
 import java.io.IOException;
 import java.sql.ResultSet;
-
 import java.util.List;
 
 import database.DatabaseManager;
@@ -13,6 +12,7 @@ import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
+import javafx.stage.Stage;
 import mapper.DatabaseMapper;
 import models.Person;
 
@@ -37,6 +37,11 @@ public class LoginController {
 		changeScene("Homeseite.fxml");
 	}
 	
+	@FXML
+	public void registrieren() throws Exception{
+		newStage("Registrierungsseite.fxml");
+	}
+	
 	private void changeScene(String fxml) throws IOException {
 		AnchorPane root = (AnchorPane)FXMLLoader.load(getClass().getResource(fxml));
 		Scene scene = new Scene(root,400,400);
@@ -44,6 +49,15 @@ public class LoginController {
 		Main.getPrimaryStage().setScene(scene);
 	}
 	
+	private void newStage(String fxml) throws IOException {
+		Stage stage = new Stage();
+		stage.initOwner(Main.getPrimaryStage());
+		AnchorPane root = (AnchorPane)FXMLLoader.load(getClass().getResource(fxml));
+		Scene scene = new Scene(root,400,400);
+		scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
+		stage.setScene(scene);
+		stage.show();
+	}
 	
 	public TextField getTfEmail() {
 		return tfEmail;
