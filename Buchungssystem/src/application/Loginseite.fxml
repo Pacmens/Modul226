@@ -19,6 +19,7 @@
       <TextField fx:id="tfEmail" layoutX="158.0" layoutY="116.0" />
       <PasswordField fx:id="pfPassword" layoutX="158.0" layoutY="146.0" />
       <Button layoutX="252.0" layoutY="192.0" mnemonicParsing="false" onAction="#login" text="login" />
+      <Button layoutX="252.0" layoutY="226.0" mnemonicParsing="false" onAction="#registrieren" text="Registrieren" />
       <Hyperlink layoutX="62.0" layoutY="193.0" text="Passwort vergessen?" />
       <Label alignment="BOTTOM_CENTER" layoutY="336.0" prefHeight="14.0" prefWidth="426.0" text="footer" />
       <Label fx:id="lbFehlermeldung" layoutX="63.0" layoutY="89.0" prefHeight="14.0" prefWidth="232.0" textFill="RED" />
