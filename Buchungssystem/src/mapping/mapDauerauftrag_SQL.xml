@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sqlMapping>	<dbToJava name="standartmapDauerauftrag" javaKlasse="entities.Dauerauftrag">
+		<mapping column="java.lang.Integer" attribut="Integer"></mapping>
+		<mapping column="java.sql.Date" attribut="Date"></mapping>
+		<mapping column="java.sql.Date" attribut="Date"></mapping>
+		<mapping column="java.lang.Integer" attribut="Integer"></mapping>
+		<mapping column="java.lang.Double" attribut="Double"></mapping>
+		<mapping column="java.lang.Integer" attribut="Integer"></mapping>
+		<mapping column="java.lang.Integer" attribut="Integer"></mapping>
+	</dbToJava>
+</sqlMapping>

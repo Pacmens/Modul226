@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sqlMapping>	<dbToJava name="standartmapPerson" javaKlasse="entities.Person">
+		<mapping column="java.lang.Boolean" attribut="Boolean"></mapping>
+		<mapping column="java.lang.String" attribut="String"></mapping>
+		<mapping column="java.lang.Integer" attribut="Integer"></mapping>
+		<mapping column="java.lang.String" attribut="String"></mapping>
+		<mapping column="java.lang.String" attribut="String"></mapping>
+	</dbToJava>
+</sqlMapping>
