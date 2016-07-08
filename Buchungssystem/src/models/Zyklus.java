@@ -2,7 +2,7 @@ package models;
 
 public class Zyklus {
 
-	// Bit(7) aus DB deklarieren
+	// Bit(7) aus DB deklarieren hahah
 	private Integer unterbruch;
 	private Integer intervallId;
 	
