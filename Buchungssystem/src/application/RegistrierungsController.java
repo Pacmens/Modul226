@@ -33,6 +33,8 @@ public class RegistrierungsController {
 		if (email.getFetchSize() > 0) return;
 		if(pfPassword.getText().equals(pfPasswordRepeat.getText())) {
 			Person person = new Person(tfName.getText(), tfEmail.getText(), pfPassword.getText());
+			String registerSql = "Insert into PERSON (NAME, EMAIL, PASSWORT) VALUES(" + person.getName() + "," + person.getEmail() + "," + person.getPassword() + ")";
+			DatabaseManager.getDatabaseManager().sendUpdate(registerSql);
 			System.out.println("Name\t" + person.getName());
 			System.out.println("Email\t" + person.getEmail());
 			System.out.println("Password\t" + person.getPassword());
