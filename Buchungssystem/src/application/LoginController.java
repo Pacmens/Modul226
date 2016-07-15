@@ -35,7 +35,6 @@ public class LoginController extends MenuController {
 		List<Person> person = DatabaseMapper.getObjectOfResutSet("src/mappings/person.person", sendQuery);
 		//wenn SQLCode = 0 ist dann ist anmelden erfolgreich
 		if (person.size() != 1) {throw new Exception("Wrong Login");}
-		System.out.println(sql);
 		_person = person.get(0);
 		changeScene("Homeseite.fxml", getClass());
 	}

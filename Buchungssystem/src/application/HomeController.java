@@ -40,7 +40,7 @@ public class HomeController extends MenuController {
 	private void calculateBudget() {
 		Double budgetTmp = 0.0;
 		for (BudgetWithTyp b : budgetTp) {
-			if (b.getDatum().compareTo(Date.valueOf(LocalDate.now())) <= -1) {
+			if (b.getDatum().compareTo(Date.valueOf(LocalDate.now())) <= 0) {
 				budgetTmp = budgetTmp + b.getMenge() * b.getMultiplikator();
 			}
 		}
@@ -62,4 +62,6 @@ public class HomeController extends MenuController {
 	public void setLbKontostand(Label lbKontostand) {
 		this.lbKontostand = lbKontostand;
 	}
+
+	
 }

@@ -12,6 +12,11 @@ import javafx.stage.Stage;
 public class MenuController {
 	private static boolean _logout = false;
 	
+	@FXML 
+	public void homeSeite() throws IOException {
+		changeScene("HomeSeite.fxml", getClass());
+	}
+	
 	@FXML
 	public void profilDatenAendern() throws IOException {
 		newStage("ProfilChangeSeite.fxml");
@@ -25,12 +30,12 @@ public class MenuController {
 	
 	@FXML
 	public void budgetAnsehen() throws IOException {
-		changeScene("HomeSeite.fxml", getClass());
+		changeScene("BudgetAnsehenSeite.fxml", getClass());
 	}
 	
 	@FXML 
-	public void budgetVerlauf() {
-		
+	public void budgetVerlauf() throws IOException {
+		changeScene("BudgetverlaufSeite.fxml", getClass());
 	}
 	
 	@FXML
