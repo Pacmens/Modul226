@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="339.0" prefWidth="415.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane prefHeight="339.0" prefWidth="415.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.BudgetAnsehenController">
    <children>
       <BorderPane prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <top>
@@ -39,16 +39,16 @@
                <children>
                   <AnchorPane layoutX="177.0" layoutY="22.0" prefHeight="231.0" prefWidth="220.0" AnchorPane.rightAnchor="18.0">
                      <children>
-                        <LineChart layoutX="-154.0" layoutY="-84.0" prefHeight="316.0" prefWidth="346.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                        <LineChart fx:id="crtLineChart" layoutX="-154.0" layoutY="-84.0" prefHeight="316.0" prefWidth="346.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                           <xAxis>
-                            <CategoryAxis side="BOTTOM" />
+                            <CategoryAxis fx:id="axsTime" side="BOTTOM" />
                           </xAxis>
                           <yAxis>
-                            <NumberAxis side="LEFT" />
+                            <NumberAxis fx:id="axsMoney" side="LEFT" />
                           </yAxis>
                         </LineChart>
                      </children></AnchorPane>
-                  <Label layoutX="14.0" layoutY="124.0" text="[Kontostand] CHF" />
+                  <Label fx:id="lbMoentanerKontostand" layoutX="14.0" layoutY="124.0" text="[Kontostand] CHF" />
                   <Label layoutX="14.0" layoutY="97.0" text="Momentaner Kontostand:" />
                   <Label layoutX="23.0" layoutY="29.0" text="Kontoverlauf">
                      <font>
