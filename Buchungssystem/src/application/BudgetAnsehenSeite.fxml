@@ -22,13 +22,14 @@
                 </Menu>
                 <Menu mnemonicParsing="false" text="Datenausgabe">
                   <items>
+                  		<MenuItem mnemonicParsing="false" onAction="#homeSeite" text="Home" />
                         <MenuItem mnemonicParsing="false" onAction="#budgetAnsehen" text="Budget ansehen" />
                         <MenuItem mnemonicParsing="false" onAction="#budgetVerlauf" text="Budgetverlauf" />
                   </items>
                 </Menu>
                   <Menu mnemonicParsing="false" text="Dateneingabe">
                      <items>
-                        <MenuItem mnemonicParsing="false" onAction="#budgetErfassen" text="Ausgabe erfassen" />
+                        <MenuItem mnemonicParsing="false" onAction="#budgetErfassen" text="Erfassen" />
                      </items>
                   </Menu>
               </menus>
