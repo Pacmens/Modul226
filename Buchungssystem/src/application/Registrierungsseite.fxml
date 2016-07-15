@@ -9,22 +9,29 @@
 
 <AnchorPane prefHeight="339.0" prefWidth="415.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.RegistrierungsController">
    <children>
-      <Label layoutX="62.0" layoutY="145.0" text="Email*" />
-      <Label layoutX="62.0" layoutY="175.0" text="Passwort*" />
-      <Label layoutX="60.0" layoutY="31.0" text="Geben Sie Ihre persönlichen Daten ein">
-         <font>
-            <Font size="13.0" />
-         </font>
-      </Label>
-      <TextField fx:id="tfName" layoutX="203.0" layoutY="111.0" />
-      <TextField fx:id="tfEmail" layoutX="203.0" layoutY="141.0" />
-      <PasswordField fx:id="pfPassword" layoutX="203.0" layoutY="171.0" />
-      <PasswordField fx:id="pfPasswordRepeat" layoutX="203.0" layoutY="202.0" />
-      <Button layoutX="265.0" layoutY="241.0" mnemonicParsing="false" onAction="#registrieren" text="registrieren" />
-      <Label layoutX="62.0" layoutY="115.0" text="Name*" />
-      <Label layoutX="62.0" layoutY="206.0" text="Passwort(wiederholen)*" />
-      <Label alignment="BOTTOM_CENTER" layoutY="336.0" prefHeight="14.0" prefWidth="426.0" text="footer" />
-      <Label fx:id="lbRegistrierungErfolg" layoutX="60.0" layoutY="51.0" prefHeight="22.0" prefWidth="270.0" textFill="#00d300" />
-      <Label fx:id="lbFehlermeldung" layoutX="60.0" layoutY="82.0" prefHeight="22.0" prefWidth="270.0" textFill="RED" />
+      <BorderPane prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <center>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Label layoutX="35.0" layoutY="152.0" text="Email*" />
+                  <Label layoutX="34.0" layoutY="181.0" text="Passwort*" />
+                  <Label layoutX="68.0" layoutY="35.0" text="Geben Sie Ihre persönlichen Daten ein">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="tfName" layoutX="186.0" layoutY="120.0" />
+                  <TextField fx:id="tfEmail" layoutX="186.0" layoutY="148.0" />
+                  <PasswordField fx:id="pfPassword" layoutX="186.0" layoutY="177.0" />
+                  <PasswordField fx:id="pfPasswordRepeat" layoutX="186.0" layoutY="207.0" />
+                  <Button layoutX="253.0" layoutY="244.0" mnemonicParsing="false" onAction="#registrieren" text="registrieren" />
+                  <Label layoutX="34.0" layoutY="124.0" text="Name*" />
+                  <Label layoutX="33.0" layoutY="211.0" text="Passwort(wiederholen)*" />
+                  <Label fx:id="lbRegistrierungErfolg" layoutX="51.0" layoutY="90.0" prefHeight="22.0" prefWidth="270.0" textFill="#00d300" />
+                  <Label fx:id="lbFehlermeldung" layoutX="51.0" layoutY="51.0" prefHeight="22.0" prefWidth="270.0" textFill="RED" />
+               </children>
+            </AnchorPane>
+         </center>
+      </BorderPane>
    </children>
 </AnchorPane>

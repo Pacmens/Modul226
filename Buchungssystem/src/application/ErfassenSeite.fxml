@@ -7,7 +7,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="339.0" prefWidth="415.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.HomeController">
+<AnchorPane prefHeight="339.0" prefWidth="415.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.ErfassenController">
    <children>
       <BorderPane prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <top>
@@ -27,7 +27,6 @@
                 </Menu>
                   <Menu mnemonicParsing="false" text="Dateneingabe">
                      <items>
-                        <MenuItem mnemonicParsing="false" text="Ausgabe erfassen" />
                         <MenuItem mnemonicParsing="false" text="Einnahme erfassen" />
                      </items>
                   </Menu>
@@ -35,19 +34,16 @@
             </MenuBar>
          </top>
          <center>
-            <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+            <AnchorPane prefHeight="364.0" prefWidth="421.0" BorderPane.alignment="CENTER">
                <children>
-                  <Label fx:id="lbWelcomeText" layoutX="23.0" layoutY="54.0" prefHeight="73.0" prefWidth="172.0" text="Willkommenstext" />
-                  <Label layoutX="245.0" layoutY="43.0" text="Kontostand:">
-                     <font>
-                        <Font size="18.0" />
-                     </font>
-                  </Label>
-                  <Label fx:id="lbKontostand" layoutX="245.0" layoutY="66.0" text="-------">
-                     <font>
-                        <Font size="18.0" />
-                     </font>
-                  </Label>
+                  <Button layoutX="248.0" layoutY="169.0" mnemonicParsing="false" onAction="#erfassen" text="Ausgabe erfassen" />
+                  <DatePicker fx:id="dpStartDate" layoutX="248.0" layoutY="100.0" prefHeight="22.0" prefWidth="134.0" />
+                  <Label layoutX="53.0" layoutY="104.0" text="Datum" />
+                  <Label layoutX="51.0" layoutY="74.0" text="Wert" />
+                  <Label fx:id="lbOperation" text="-" visible="false" />
+                  <TextField fx:id="tfWert" layoutX="248.0" layoutY="70.0" />
+                  <ComboBox layoutX="248.0" layoutY="136.0" prefHeight="22.0" prefWidth="134.0" />
+                  <Label layoutX="56.0" layoutY="139.0" text="Typ" />
                </children>
             </AnchorPane>
          </center>

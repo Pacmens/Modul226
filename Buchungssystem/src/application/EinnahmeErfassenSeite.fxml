@@ -9,39 +9,42 @@
 
 <AnchorPane prefHeight="339.0" prefWidth="415.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.ErfassenController">
    <children>
-      <MenuBar layoutY="1.0" prefHeight="24.0" prefWidth="415.0">
-        <menus>
-          <Menu mnemonicParsing="false" text="Profil">
-            <items>
-              <MenuItem mnemonicParsing="false" text="Profildaten ändern" />
-                  <MenuItem mnemonicParsing="false" text="Abmelden" />
-            </items>
-          </Menu>
-          <Menu mnemonicParsing="false" text="Datenausgabe">
-            <items>
-                  <MenuItem mnemonicParsing="false" text="Budget ansehen" />
-                  <MenuItem mnemonicParsing="false" text="Budgetverlauf" />
-            </items>
-          </Menu>
-            <Menu mnemonicParsing="false" text="Dateneingabe">
-               <items>
-                  <MenuItem mnemonicParsing="false" text="Ausgabe erfassen" />
-               </items>
-            </Menu>
-        </menus>
-      </MenuBar>
-      <Label alignment="BOTTOM_CENTER" layoutX="1.0" layoutY="326.0" prefHeight="11.0" prefWidth="415.0" text="footer" />
-      <Hyperlink layoutX="-1.0" layoutY="25.0" text="&lt;&lt;zurück" />
-      <Label layoutX="34.0" layoutY="50.0" text="Wert" />
-      <Label layoutX="34.0" layoutY="89.0" text="Datum" />
-      <TextField fx:id="tfWert" layoutX="214.0" layoutY="46.0" />
-      <DatePicker fx:id="dpStartDate" layoutX="214.0" layoutY="85.0" />
-      <Button layoutX="214.0" layoutY="258.0" mnemonicParsing="false" onAction="#erfassen" text="Einnahme erfassen" />
-      <DatePicker fx:id="dpEndDate" layoutX="214.0" layoutY="128.0" />
-      <Label layoutX="34.0" layoutY="132.0" text="Datum bis(nur wenn Dauerauftrag)" />
-      <CheckBox fx:id="cbDauerauftrag" layoutX="214.0" layoutY="163.0" mnemonicParsing="false" text="Dauerauftrag" />
-      <ComboBox fx:id="cmbZyklus" layoutX="214.0" layoutY="199.0" prefWidth="150.0" />
-      <Label layoutX="42.0" layoutY="203.0" text="Zyklus" />
-      <Label fx:id="lbOperation" layoutX="220.0" layoutY="230.0" text="+" visible="false" />
+      <BorderPane prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <top>
+            <MenuBar prefHeight="24.0" prefWidth="415.0" BorderPane.alignment="CENTER">
+              <menus>
+                <Menu mnemonicParsing="false" text="Profil">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="Profildaten ändern" />
+                        <MenuItem mnemonicParsing="false" text="Abmelden" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Datenausgabe">
+                  <items>
+                        <MenuItem mnemonicParsing="false" text="Budget ansehen" />
+                        <MenuItem mnemonicParsing="false" text="Budgetverlauf" />
+                  </items>
+                </Menu>
+                  <Menu mnemonicParsing="false" text="Dateneingabe">
+                     <items>
+                        <MenuItem mnemonicParsing="false" text="Ausgabe erfassen" />
+                     </items>
+                  </Menu>
+              </menus>
+            </MenuBar>
+         </top>
+         <center>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Label layoutX="46.0" layoutY="59.0" text="Wert" />
+                  <Label layoutX="42.0" layoutY="100.0" text="Datum" />
+                  <TextField fx:id="tfWert" layoutX="208.0" layoutY="55.0" />
+                  <DatePicker fx:id="dpStartDate" layoutX="208.0" layoutY="96.0" prefHeight="22.0" prefWidth="137.0" />
+                  <Button layoutX="208.0" layoutY="199.0" mnemonicParsing="false" onAction="#erfassen" text="Einnahme erfassen" />
+                  <Label fx:id="lbOperation" text="+" visible="false" />
+               </children>
+            </AnchorPane>
+         </center>
+      </BorderPane>
    </children>
 </AnchorPane>

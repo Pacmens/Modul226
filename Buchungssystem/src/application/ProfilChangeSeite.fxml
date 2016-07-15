@@ -9,38 +9,46 @@
 
 <AnchorPane prefHeight="339.0" prefWidth="415.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <MenuBar layoutY="1.0" prefHeight="24.0" prefWidth="415.0">
-        <menus>
-          <Menu mnemonicParsing="false" text="Profil">
-            <items>
-                  <MenuItem mnemonicParsing="false" text="Abmelden" />
-            </items>
-          </Menu>
-          <Menu mnemonicParsing="false" text="Datenausgabe">
-            <items>
-                  <MenuItem mnemonicParsing="false" text="Budget ansehen" />
-                  <MenuItem mnemonicParsing="false" text="Budgetverlauf" />
-            </items>
-          </Menu>
-            <Menu mnemonicParsing="false" text="Dateneingabe">
-               <items>
-                  <MenuItem mnemonicParsing="false" text="Ausgabe erfassen" />
-                  <MenuItem mnemonicParsing="false" text="Einnahme erfassen" />
-               </items>
-            </Menu>
-        </menus>
-      </MenuBar>
-      <Label alignment="BOTTOM_CENTER" layoutX="1.0" layoutY="326.0" prefHeight="11.0" prefWidth="415.0" text="footer" />
-      <Label layoutX="72.0" layoutY="73.0" text="Name" />
-      <Label layoutX="72.0" layoutY="107.0" text="Email" />
-      <Label layoutX="72.0" layoutY="143.0" text="Passwort" />
-      <Label layoutX="72.0" layoutY="178.0" text="Passwort(wiederholen)" />
-      <TextField layoutX="192.0" layoutY="69.0" />
-      <TextField layoutX="192.0" layoutY="103.0" />
-      <TextField layoutX="192.0" layoutY="139.0" />
-      <TextField layoutX="192.0" layoutY="174.0" />
-      <Button layoutX="248.0" layoutY="223.0" mnemonicParsing="false" text="Profil ändern" />
-      <Label layoutX="73.0" layoutY="271.0" text="Ausgabe, welche Felder und wie abgeändert wurden" />
-      <Hyperlink layoutY="25.0" text="&lt;&lt;zurück" />
+      <BorderPane prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <top>
+            <MenuBar prefHeight="24.0" prefWidth="415.0" BorderPane.alignment="CENTER">
+              <menus>
+                <Menu mnemonicParsing="false" text="Profil">
+                  <items>
+                        <MenuItem mnemonicParsing="false" text="Abmelden" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Datenausgabe">
+                  <items>
+                        <MenuItem mnemonicParsing="false" text="Budget ansehen" />
+                        <MenuItem mnemonicParsing="false" text="Budgetverlauf" />
+                  </items>
+                </Menu>
+                  <Menu mnemonicParsing="false" text="Dateneingabe">
+                     <items>
+                        <MenuItem mnemonicParsing="false" text="Ausgabe erfassen" />
+                        <MenuItem mnemonicParsing="false" text="Einnahme erfassen" />
+                     </items>
+                  </Menu>
+              </menus>
+            </MenuBar>
+         </top>
+         <center>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Label layoutX="28.0" layoutY="83.0" text="Name" />
+                  <Label layoutX="29.0" layoutY="45.0" text="Email" />
+                  <Label layoutX="28.0" layoutY="125.0" text="Passwort" />
+                  <Label layoutX="28.0" layoutY="165.0" text="Passwort(wiederholen)" />
+                  <TextField layoutX="216.0" layoutY="161.0" />
+                  <TextField layoutX="216.0" layoutY="41.0" />
+                  <TextField layoutX="216.0" layoutY="121.0" />
+                  <TextField layoutX="216.0" layoutY="79.0" />
+                  <Button layoutX="272.0" layoutY="223.0" mnemonicParsing="false" text="Profil ändern" />
+                  <Label layoutX="67.0" layoutY="258.0" text="Ausgabe, welche Felder und wie abgeändert wurden" />
+               </children>
+            </AnchorPane>
+         </center>
+      </BorderPane>
    </children>
 </AnchorPane>
