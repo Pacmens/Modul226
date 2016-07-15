@@ -15,20 +15,19 @@
               <menus>
                 <Menu mnemonicParsing="false" text="Profil">
                   <items>
-                    <MenuItem mnemonicParsing="false" text="Profildaten ändern" />
-                        <MenuItem mnemonicParsing="false" text="Abmelden" />
+                    <MenuItem mnemonicParsing="false" onAction="#profilDatenAendern" text="Profildaten ändern" />
+                        <MenuItem mnemonicParsing="false" onAction="#abmelden" text="Abmelden" />
                   </items>
                 </Menu>
                 <Menu mnemonicParsing="false" text="Datenausgabe">
                   <items>
-                        <MenuItem mnemonicParsing="false" text="Budget ansehen" />
-                        <MenuItem mnemonicParsing="false" text="Budgetverlauf" />
+                        <MenuItem mnemonicParsing="false" onAction="#budgetAnsehen" text="Budget ansehen" />
+                        <MenuItem mnemonicParsing="false" onAction="#budgetVerlauf" text="Budgetverlauf" />
                   </items>
                 </Menu>
                   <Menu mnemonicParsing="false" text="Dateneingabe">
                      <items>
-                        <MenuItem mnemonicParsing="false" text="Ausgabe erfassen" />
-                        <MenuItem mnemonicParsing="false" text="Einnahme erfassen" />
+                        <MenuItem mnemonicParsing="false" onAction="#budgetErfassen" text="Ausgabe erfassen" />
                      </items>
                   </Menu>
               </menus>
@@ -37,14 +36,14 @@
          <center>
             <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
                <children>
-                  <Label fx:id="lbWelcomeText" layoutX="3.0" layoutY="51.0" prefHeight="73.0" prefWidth="210.0" text="Willkommenstext" />
+                  <Label fx:id="lbWelcomeText" layoutX="21.0" layoutY="51.0" prefHeight="73.0" prefWidth="192.0" text="Willkommenstext" AnchorPane.leftAnchor="21.0" />
                </children>
             </AnchorPane>
          </center>
          <right>
             <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
                <children>
-                  <Label layoutX="39.0" layoutY="25.0" text="Kontostand:">
+                  <Label layoutX="39.0" layoutY="25.0" text="Kontostand:" AnchorPane.rightAnchor="64.0">
                      <font>
                         <Font size="18.0" />
                      </font>

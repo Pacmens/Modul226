@@ -1,5 +1,6 @@
 package application;
 
+import java.io.IOException;
 import java.sql.Date;
 import java.sql.ResultSet;
 import java.util.ArrayList;
@@ -42,6 +43,12 @@ public class ErfassenController extends MenuController {
 		// Datenbankaufruf oder Hashmap anpassen
 			String sql = "Insert into budget (PERSON_ID_FS, MENGE, DATUM, TYP_ID_FS) VALUES ('" + LoginController.getPerson().getPersonId() + "', '" + budget.getMenge() + "', '" + budget.getDatum() + "', '" + budget.getTypIdFs() + "');";
 			DatabaseManager.getDatabaseManager().sendUpdate(sql);
+			try {
+				changeScene("Homeseite.fxml", getClass());
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 	}
 	
 	@FXML

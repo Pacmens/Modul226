@@ -2,7 +2,7 @@
 <sqlMapping>	<dbToJava name="standartmapBudgetWithTyp" javaKlasse="entities.BudgetWithTyp">
 		<mapping column="DATUM" attribut="datum"></mapping>
 		<mapping column="MULTIPLIKATOR" attribut="multiplikator"></mapping>
-		<mapping column="PERSON_ID" attribut="personId"></mapping>
+		<mapping column="PERSON_ID_FS" attribut="personIdFs"></mapping>
 		<mapping column="BUDGET_ID" attribut="budgetId"></mapping>
 		<mapping column="MENGE" attribut="menge"></mapping>
 		<mapping column="TYP_ID" attribut="typId"></mapping>

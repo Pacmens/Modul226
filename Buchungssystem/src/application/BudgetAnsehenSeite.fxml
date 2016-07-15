@@ -12,23 +12,23 @@
    <children>
       <BorderPane prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <top>
-            <MenuBar prefHeight="24.0" prefWidth="415.0" BorderPane.alignment="CENTER">
+           <MenuBar prefHeight="24.0" prefWidth="415.0" BorderPane.alignment="CENTER">
               <menus>
                 <Menu mnemonicParsing="false" text="Profil">
                   <items>
-                    <MenuItem mnemonicParsing="false" text="Profildaten ändern" />
-                        <MenuItem mnemonicParsing="false" text="Abmelden" />
+                    <MenuItem mnemonicParsing="false" onAction="#profilDatenAendern" text="Profildaten ändern" />
+                        <MenuItem mnemonicParsing="false" onAction="#abmelden" text="Abmelden" />
                   </items>
                 </Menu>
                 <Menu mnemonicParsing="false" text="Datenausgabe">
                   <items>
-                        <MenuItem mnemonicParsing="false" text="Budgetverlauf" />
+                        <MenuItem mnemonicParsing="false" onAction="#budgetAnsehen" text="Budget ansehen" />
+                        <MenuItem mnemonicParsing="false" onAction="#budgetVerlauf" text="Budgetverlauf" />
                   </items>
                 </Menu>
                   <Menu mnemonicParsing="false" text="Dateneingabe">
                      <items>
-                        <MenuItem mnemonicParsing="false" text="Ausgabe erfassen" />
-                        <MenuItem mnemonicParsing="false" text="Einnahme erfassen" />
+                        <MenuItem mnemonicParsing="false" onAction="#budgetErfassen" text="Ausgabe erfassen" />
                      </items>
                   </Menu>
               </menus>

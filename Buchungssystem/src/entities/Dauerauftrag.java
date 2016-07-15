@@ -5,11 +5,11 @@ import java.sql.Date;
 public class Dauerauftrag {
 	private Integer dauerauftragId;
 	private Date endDatum;
+	private Integer zyklusIdFs;
+	private Integer personIdFs;
 	private Date startDatum;
-	private Integer personId;
 	private Double menge;
-	private Integer typId;
-	private Integer zyklusId;
+	private Integer typIdFs;
 
 	public void setDauerauftragId(Integer dauerauftragId) {
 		this. dauerauftragId = dauerauftragId;
@@ -27,20 +27,28 @@ public class Dauerauftrag {
 		return endDatum;
 	}
 
+	public void setZyklusIdFs(Integer zyklusIdFs) {
+		this. zyklusIdFs = zyklusIdFs;
+	}
+
+	public Integer getZyklusIdFs() {
+		return zyklusIdFs;
+	}
+
+	public void setPersonIdFs(Integer personIdFs) {
+		this. personIdFs = personIdFs;
+	}
+
+	public Integer getPersonIdFs() {
+		return personIdFs;
+	}
+
 	public void setStartDatum(Date startDatum) {
 		this. startDatum = startDatum;
 	}
 
 	public Date getStartDatum() {
 		return startDatum;
-	}
-
-	public void setPersonId(Integer personId) {
-		this. personId = personId;
-	}
-
-	public Integer getPersonId() {
-		return personId;
 	}
 
 	public void setMenge(Double menge) {
@@ -51,20 +59,12 @@ public class Dauerauftrag {
 		return menge;
 	}
 
-	public void setTypId(Integer typId) {
-		this. typId = typId;
+	public void setTypIdFs(Integer typIdFs) {
+		this. typIdFs = typIdFs;
 	}
 
-	public Integer getTypId() {
-		return typId;
-	}
-
-	public void setZyklusId(Integer zyklusId) {
-		this. zyklusId = zyklusId;
-	}
-
-	public Integer getZyklusId() {
-		return zyklusId;
+	public Integer getTypIdFs() {
+		return typIdFs;
 	}
 
 }

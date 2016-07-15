@@ -40,20 +40,26 @@ public class LoginController extends MenuController {
 		changeScene("Homeseite.fxml", getClass());
 	}
 	
+	public static void reloadUser() throws Exception {
+		String sql = "Select * from Person where PERSON_ID = '" + _person.getPersonId() + "';";
+		ResultSet sendQuery = DatabaseManager.getDatabaseManager().sendQuery(sql);
+		List<Person> person = DatabaseMapper.getObjectOfResutSet("src/mappings/person.person", sendQuery);
+		_person = person.get(0);
+	}
+	
+	@FXML
+	public void initialize() {
+		if (MenuController.isLogout()) {
+			_person = null;
+		}
+	}
+	
 	@FXML
 	public void registrieren() throws Exception{
 		newStage("Registrierungsseite.fxml");
 	}
 	
-	private void newStage(String fxml) throws IOException {
-		Stage stage = new Stage();
-		stage.initOwner(Main.getPrimaryStage());
-		AnchorPane root = (AnchorPane)FXMLLoader.load(getClass().getResource(fxml));
-		Scene scene = new Scene(root,400,400);
-		scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
-		stage.setScene(scene);
-		stage.show();
-	}
+	
 	
 	public TextField getTfEmail() {
 		return tfEmail;

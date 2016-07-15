@@ -4,7 +4,7 @@ import java.sql.Date;
 
 public class Budget {
 	private Date datum;
-	private Integer personId;
+	private Integer personIdFs;
 	private Integer budgetId;
 	private Double menge;
 	private Integer typIdFs;
@@ -17,12 +17,12 @@ public class Budget {
 		return datum;
 	}
 
-	public void setPersonId(Integer personId) {
-		this. personId = personId;
+	public void setPersonIdFs(Integer personIdFs) {
+		this. personIdFs = personIdFs;
 	}
 
-	public Integer getPersonId() {
-		return personId;
+	public Integer getPersonIdFs() {
+		return personIdFs;
 	}
 
 	public void setBudgetId(Integer budgetId) {

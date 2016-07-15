@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <sqlMapping>	<dbToJava name="standartmapBudget" javaKlasse="entities.Budget">
 		<mapping column="DATUM" attribut="datum"></mapping>
-		<mapping column="PERSON_ID" attribut="personId"></mapping>
+		<mapping column="PERSON_ID_FS" attribut="personIdFs"></mapping>
 		<mapping column="BUDGET_ID" attribut="budgetId"></mapping>
 		<mapping column="MENGE" attribut="menge"></mapping>
 		<mapping column="TYP_ID_FS" attribut="typIdFs"></mapping>

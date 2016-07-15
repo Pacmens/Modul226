@@ -2,10 +2,10 @@
 <sqlMapping>	<dbToJava name="standartmapDauerauftrag" javaKlasse="entities.Dauerauftrag">
 		<mapping column="DAUERAUFTRAG_ID" attribut="dauerauftragId"></mapping>
 		<mapping column="END_DATUM" attribut="endDatum"></mapping>
+		<mapping column="ZYKLUS_ID_FS" attribut="zyklusIdFs"></mapping>
+		<mapping column="PERSON_ID_FS" attribut="personIdFs"></mapping>
 		<mapping column="START_DATUM" attribut="startDatum"></mapping>
-		<mapping column="PERSON_ID" attribut="personId"></mapping>
 		<mapping column="MENGE" attribut="menge"></mapping>
-		<mapping column="TYP_ID" attribut="typId"></mapping>
-		<mapping column="ZYKLUS_ID" attribut="zyklusId"></mapping>
+		<mapping column="TYP_ID_FS" attribut="typIdFs"></mapping>
 	</dbToJava>
 </sqlMapping>
