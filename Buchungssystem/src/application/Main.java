@@ -29,25 +29,11 @@ public class Main extends Application {
 	}
 	
 	private static Stage primaryStage;
-	private static String email;
-	private static String name;
-	private static Integer personId;
+	
 	private static ArrayList<Budget> budgetList = new ArrayList<Budget>();
 
 	public static Stage getPrimaryStage() {
 		return primaryStage;
-	}
-
-	public static String getEmail() {
-		return email;
-	}
-
-	public static String getName() {
-		return name;
-	}
-
-	public static Integer getPersonId() {
-		return personId;
 	}
 
 	public static ArrayList<Budget> getBudgetList() {

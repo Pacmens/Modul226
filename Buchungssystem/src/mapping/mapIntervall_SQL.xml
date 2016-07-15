@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <sqlMapping>	<dbToJava name="standartmapIntervall" javaKlasse="entities.Intervall">
-		<mapping column="java.lang.Integer" attribut="Integer"></mapping>
-		<mapping column="java.lang.Integer" attribut="Integer"></mapping>
-		<mapping column="java.lang.String" attribut="String"></mapping>
+		<mapping column="INTERVALL_ID" attribut="intervallId"></mapping>
+		<mapping column="TAGE" attribut="tage"></mapping>
+		<mapping column="NAME" attribut="name"></mapping>
 	</dbToJava>
 </sqlMapping>

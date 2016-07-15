@@ -24,7 +24,9 @@ public class LoginController {
 	private PasswordField pfPassword;
 	@FXML
 	private Label lbFehlermeldung;
+	private static Person _person;
 	
+
 	@FXML
 	public void login() throws Exception{
 		String sql = "Select * From Person Where EMAIL = '" + tfEmail.getText() + "' AND " + " PASSWORT = '" + pfPassword.getText() + "'";
@@ -33,7 +35,8 @@ public class LoginController {
 		List<Person> person = DatabaseMapper.getObjectOfResutSet("src/mappings/person.person", sendQuery);
 		//wenn SQLCode = 0 ist dann ist anmelden erfolgreich
 		if (person.size() != 1) {throw new Exception("Wrong Login");}
-		System.out.println(sql);	
+		System.out.println(sql);
+		_person = person.get(0);
 		changeScene("Homeseite.fxml");
 	}
 	
@@ -78,5 +81,9 @@ public class LoginController {
 	}
 	public void setLbFehlermeldung(Label lbFehlermeldung) {
 		this.lbFehlermeldung = lbFehlermeldung;
+	}
+
+	public static Person getPerson() {
+		return _person;
 	}
 }

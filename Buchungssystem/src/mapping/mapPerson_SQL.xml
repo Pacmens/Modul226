@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <sqlMapping>	<dbToJava name="standartmapPerson" javaKlasse="entities.Person">
-		<mapping column="java.lang.Boolean" attribut="Boolean"></mapping>
-		<mapping column="java.lang.String" attribut="String"></mapping>
-		<mapping column="java.lang.Integer" attribut="Integer"></mapping>
-		<mapping column="java.lang.String" attribut="String"></mapping>
-		<mapping column="java.lang.String" attribut="String"></mapping>
+		<mapping column="IS_ADMIN" attribut="isAdmin"></mapping>
+		<mapping column="PASSWORT" attribut="passwort"></mapping>
+		<mapping column="PERSON_ID" attribut="personId"></mapping>
+		<mapping column="EMAIL" attribut="email"></mapping>
+		<mapping column="NAME" attribut="name"></mapping>
 	</dbToJava>
 </sqlMapping>

@@ -7,7 +7,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="339.0" prefWidth="415.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane prefHeight="339.0" prefWidth="415.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.HomeController">
    <children>
       <MenuBar layoutY="1.0" prefHeight="24.0" prefWidth="415.0">
         <menus>
@@ -31,13 +31,13 @@
             </Menu>
         </menus>
       </MenuBar>
-      <Label layoutX="26.0" layoutY="74.0" prefHeight="73.0" prefWidth="95.0" text="Willkommenstext" />
+      <Label fx:id="lbWelcomeText" layoutX="26.0" layoutY="74.0" prefHeight="73.0" prefWidth="95.0" text="Willkommenstext" />
       <Label layoutX="222.0" layoutY="60.0" text="Kontostand:">
          <font>
             <Font size="18.0" />
          </font>
       </Label>
-      <Label layoutX="319.0" layoutY="60.0" text="-------">
+      <Label fx:id="lbKontostand" layoutX="319.0" layoutY="60.0" text="-------">
          <font>
             <Font size="18.0" />
          </font>

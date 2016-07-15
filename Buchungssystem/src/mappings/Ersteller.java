@@ -21,11 +21,11 @@ public class Ersteller {
 		String projektSrc = "C:/Users/5ia14lieberhard/git/Modul226/Buchungssystem/src";
 		String mappingPackage = "mapping";
 		saveMappingAndClassT("BudgetWithTyp", packageName, projektSrc, mappingPackage);
-		/*saveMappingAndClass("Intervall", packageName, projektSrc, mappingPackage);
+		saveMappingAndClass("Intervall", packageName, projektSrc, mappingPackage);
 		saveMappingAndClass("Budget", packageName, projektSrc, mappingPackage);
 		saveMappingAndClass("Person", packageName, projektSrc, mappingPackage);
 		saveMappingAndClass("Typ", packageName, projektSrc, mappingPackage);
-		saveMappingAndClass("Dauerauftrag", packageName, projektSrc, mappingPackage);*/
+		saveMappingAndClass("Dauerauftrag", packageName, projektSrc, mappingPackage);
 	}
 
 	public static void saveMappingAndClass(String tableName, String packageName, String projektSrc, String mappingPackage) throws IOException {
@@ -55,7 +55,7 @@ public class Ersteller {
 		mapping.append("<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<sqlMapping>");
 		mapping.append("\t<dbToJava name=\"standartmap" + tableName + "\" javaKlasse=\"" + packageName + "." + tableName + "\">\r\n");
 		for (Entry<String, String> entry : entrySet) {
-			mapping.append("\t\t<mapping column=\"" + entry.getValue() + "\" attribut=\"" + formatClass(entry.getValue()) + "\"></mapping>\r\n");
+			mapping.append("\t\t<mapping column=\"" + entry.getKey() + "\" attribut=\"" + formatName(entry.getKey()) + "\"></mapping>\r\n");
 		}
 
 		mapping.append("\t</dbToJava>\r\n</sqlMapping>");
@@ -99,7 +99,7 @@ public class Ersteller {
 	}
 
 	public static void saveMappingAndClassT(String tableName, String packageName, String projektSrc, String mappingPackage) throws IOException {
-		String sql = "Select * From (Select * From Budget Inner Join Typ On Budget.TypId = Typ.TypId) as " + tableName;
+		String sql = "Select * From (Select * From Budget Inner Join Typ On Budget.Typ_Id_Fs = Typ.Typ_Id) as " + tableName;
 
 		Result sendQuery = ResultSupport.toResult(DatabaseManager.getDatabaseManager().sendQuery(sql));
 		String[] i = sendQuery.getColumnNames();
@@ -125,7 +125,7 @@ public class Ersteller {
 		mapping.append("<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<sqlMapping>");
 		mapping.append("\t<dbToJava name=\"standartmap" + tableName + "\" javaKlasse=\"" + packageName + "." + tableName + "\">\r\n");
 		for (Entry<String, String> entry : entrySet) {
-			mapping.append("\t\t<mapping column=\"" + entry.getValue() + "\" attribut=\"" + formatClass(entry.getValue()) + "\"></mapping>\r\n");
+			mapping.append("\t\t<mapping column=\"" + entry.getKey() + "\" attribut=\"" + formatName(entry.getKey()) + "\"></mapping>\r\n");
 		}
 
 		mapping.append("\t</dbToJava>\r\n</sqlMapping>");
