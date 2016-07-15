@@ -10,8 +10,8 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import mapper.DatabaseMapper;
 
-public class HomeController {
-
+public class HomeController extends MenuController {
+	
 	@FXML
 	private Label lbWelcomeText;
 	@FXML

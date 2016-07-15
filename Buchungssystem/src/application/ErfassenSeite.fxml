@@ -36,13 +36,13 @@
          <center>
             <AnchorPane prefHeight="364.0" prefWidth="421.0" BorderPane.alignment="CENTER">
                <children>
-                  <Button layoutX="248.0" layoutY="169.0" mnemonicParsing="false" onAction="#erfassen" text="Ausgabe erfassen" />
+                  <Button layoutX="324.0" layoutY="169.0" mnemonicParsing="false" onAction="#erfassen" text="Erfassen" />
                   <DatePicker fx:id="dpStartDate" layoutX="248.0" layoutY="100.0" prefHeight="22.0" prefWidth="134.0" />
                   <Label layoutX="53.0" layoutY="104.0" text="Datum" />
                   <Label layoutX="51.0" layoutY="74.0" text="Wert" />
                   <Label fx:id="lbOperation" text="-" visible="false" />
                   <TextField fx:id="tfWert" layoutX="248.0" layoutY="70.0" />
-                  <ComboBox layoutX="248.0" layoutY="136.0" prefHeight="22.0" prefWidth="134.0" />
+                  <ComboBox fx:id="cbTyp" layoutX="248.0" layoutY="136.0" prefHeight="22.0" prefWidth="134.0" />
                   <Label layoutX="56.0" layoutY="139.0" text="Typ" />
                </children>
             </AnchorPane>

@@ -15,7 +15,7 @@
               <menus>
                 <Menu mnemonicParsing="false" text="Profil">
                   <items>
-                    <MenuItem mnemonicParsing="false" onAction="#profilDatenAendern" text="Profildaten ändern" />
+                    <MenuItem mnemonicParsing="false" text="Profildaten ändern" />
                         <MenuItem mnemonicParsing="false" text="Abmelden" />
                   </items>
                 </Menu>
@@ -27,7 +27,7 @@
                 </Menu>
                   <Menu mnemonicParsing="false" text="Dateneingabe">
                      <items>
-                        <MenuItem mnemonicParsing="false" onAction="#budgetErfassen" text="Ausgabe erfassen" />
+                        <MenuItem mnemonicParsing="false" text="Ausgabe erfassen" />
                         <MenuItem mnemonicParsing="false" text="Einnahme erfassen" />
                      </items>
                   </Menu>

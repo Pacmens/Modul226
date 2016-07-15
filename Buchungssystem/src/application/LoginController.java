@@ -16,7 +16,7 @@ import javafx.stage.Stage;
 import mapper.DatabaseMapper;
 import models.Person;
 
-public class LoginController {
+public class LoginController extends MenuController {
 	
 	@FXML
 	private TextField tfEmail;
@@ -37,19 +37,12 @@ public class LoginController {
 		if (person.size() != 1) {throw new Exception("Wrong Login");}
 		System.out.println(sql);
 		_person = person.get(0);
-		changeScene("Homeseite.fxml");
+		changeScene("Homeseite.fxml", getClass());
 	}
 	
 	@FXML
 	public void registrieren() throws Exception{
 		newStage("Registrierungsseite.fxml");
-	}
-	
-	private void changeScene(String fxml) throws IOException {
-		AnchorPane root = (AnchorPane)FXMLLoader.load(getClass().getResource(fxml));
-		Scene scene = new Scene(root,400,400);
-		scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
-		Main.getPrimaryStage().setScene(scene);
 	}
 	
 	private void newStage(String fxml) throws IOException {

@@ -1,49 +1,47 @@
 package application;
 
+import java.sql.Date;
+import java.sql.ResultSet;
+import java.util.ArrayList;
+import java.util.List;
+
+import database.DatabaseManager;
+import entities.Budget;
+import entities.Typ;
 import javafx.fxml.FXML;
 import javafx.scene.control.CheckBox;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.Label;
+import javafx.scene.control.ListCell;
+import javafx.scene.control.ListView;
 import javafx.scene.control.TextField;
-import models.Budget;
+import javafx.util.Callback;
+import mapper.DatabaseMapper;
 
-public class ErfassenController {
+public class ErfassenController extends MenuController {
 	
 	@FXML
 	private TextField tfWert;
+	
 	@FXML
 	private DatePicker dpStartDate;
+	
 	@FXML
-	private Label lbOperation;
-	@FXML
-	private DatePicker dpEndDate;
-	@FXML
-	private CheckBox cbDauerauftrag;
-	@FXML
-	private ComboBox<String> cmbZyklus = new ComboBox<String>();
-	@FXML
+	private ComboBox<Typ> cbTyp;
+	
 	private Budget budget;
 	
 	@FXML
 	public void erfassen() {
-		
-		if(cbDauerauftrag.isSelected()) {
-			budget = new Budget(Double.parseDouble(tfWert.getText()), dpStartDate.getValue(), lbOperation.getText(),
-								dpEndDate.getValue(), cbDauerauftrag.isSelected(), cmbZyklus.getValue());
-		} else {
-			budget = new Budget(Double.parseDouble(tfWert.getText()), dpStartDate.getValue(), lbOperation.getText());
-		}
-		
-		
-		System.out.println("Budget    \t " + budget.getWert());
-		System.out.println("Operation \t " + budget.getOperation());
-		System.out.println("Zyklus    \t " + budget.getZyklus());
-		System.out.println("Enddate   \t " + budget.getEndDate());
-		System.out.println("Startdate \t " + budget.getStartDate());
-		
+			budget = new Budget();
+			budget.setTypIdFs(cbTyp.getSelectionModel().getSelectedItem().getTypId());
+			budget.setDatum(Date.valueOf(dpStartDate.getValue()));
+			budget.setMenge(new Double(tfWert.getText()));
+			
 		// Datenbankaufruf oder Hashmap anpassen
-		
+			String sql = "Insert into budget (PERSON_ID_FS, MENGE, DATUM, TYP_ID_FS) VALUES ('" + LoginController.getPerson().getPersonId() + "', '" + budget.getMenge() + "', '" + budget.getDatum() + "', '" + budget.getTypIdFs() + "');";
+			DatabaseManager.getDatabaseManager().sendUpdate(sql);
 	}
 	
 	@FXML
@@ -53,16 +51,38 @@ public class ErfassenController {
 	
 	private void initZyklus() {
 		//Datenbankaufruf mit dem 
-		String sql = "Select TAGE From Zyklus";
-
-		cmbZyklus.getItems().add("1 täglich");
-		cmbZyklus.getItems().add("5 täglich");
-		cmbZyklus.getItems().add("7 täglich");
-		cmbZyklus.getItems().add("14 täglich");
-		cmbZyklus.getItems().add("1 monatlich");
-		cmbZyklus.getItems().add("6 monatlich");
+		String sql = "Select * From Typ";
+		ResultSet sendQuery = DatabaseManager.getDatabaseManager().sendQuery(sql);
+		List<Typ> objectOfResutSet = new ArrayList<>();
+		try {
+			objectOfResutSet = DatabaseMapper.getObjectOfResutSet(System.getProperty("user.dir") + "/src/mapping/mapTyp.standartmapTyp", sendQuery);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		cbTyp.setCellFactory(new Callback<ListView<Typ>, ListCell<Typ>>() {
+			
+			@Override
+			public ListCell<Typ> call(ListView<Typ> param) {
+				final ListCell<Typ> cell = new ListCell<Typ>() {
+                    {
+                        super.setPrefWidth(100);
+                    }    
+                    @Override public void updateItem(Typ item, boolean empty) {
+                            super.updateItem(item, empty);
+                            if (item != null) {
+                                setText(item.getName());    
+                          
+                            } else {
+                                setText(null);
+                            }
+                        }
+            };
+            return cell;
+			}
+		});
+		cbTyp.getItems().addAll(objectOfResutSet);
 		
-		cmbZyklus.setValue("1 monatlich");
 	}
 
 	public TextField getTfWert() {
@@ -81,38 +101,7 @@ public class ErfassenController {
 		this.dpStartDate = dpStartDate;
 	}
 
-	public Label getLbOperation() {
-		return lbOperation;
-	}
-
-	public void setLbOperation(Label lbOperation) {
-		this.lbOperation = lbOperation;
-	}
-
-	public DatePicker getDpEndDate() {
-		return dpEndDate;
-	}
-
-	public void setDpEndDate(DatePicker dpEndDate) {
-		this.dpEndDate = dpEndDate;
-	}
-
-	public CheckBox getCbDauerauftrag() {
-		return cbDauerauftrag;
-	}
-
-	public void setCbDauerauftrag(CheckBox cbDauerauftrag) {
-		this.cbDauerauftrag = cbDauerauftrag;
-	}
-
-	public ComboBox<String> getCmbZyklus() {
-		return cmbZyklus;
-	}
-
-	public void setCmbZyklus(ComboBox<String> cmbZyklus) {
-		this.cmbZyklus = cmbZyklus;
-	}
-
+	
 	public Budget getBudget() {
 		return budget;
 	}
